@@ -3,8 +3,10 @@ JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
+	P ActionCode(Ign)
+		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("C:/prj_FPGA/UART_core_update/output_files/") File("UART_FPGA.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("C:/prj_FPGA/UART_core_update/output_files/") File("UART_FPGA.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

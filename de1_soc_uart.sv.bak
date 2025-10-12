@@ -1,0 +1,15 @@
+module de1_soc_uart (
+    input wire CLOCK_50,
+    input wire KEY[0],  // Reset (active low)
+    input wire UART_RXD,  // RX từ HPS
+    output wire UART_TXD  // TX đến HPS
+);
+
+uart_string_loopback uart_loopback (
+    .clk(CLOCK_50),
+    .rst_n(KEY[0]),
+    .rx(UART_RXD),
+    .tx(UART_TXD)
+);
+
+endmodule

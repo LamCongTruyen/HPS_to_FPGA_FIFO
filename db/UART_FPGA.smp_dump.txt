@@ -1,14 +1,31 @@
 
-State Machine - |uart_string_loopback|uart_tx:uart_tx_inst|state
-Name state.STATE_STOP state.STATE_DATA state.STATE_START state.STATE_IDLE 
-state.STATE_IDLE 0 0 0 0 
-state.STATE_START 0 0 1 1 
-state.STATE_DATA 0 1 0 1 
-state.STATE_STOP 1 0 0 1 
+State Machine - |de1_soc_uart|state
+Name state.00001011 state.00001010 state.00000011 state.00000010 state.00000001 state.00000000 state.00000100 
+state.00000000 0 0 0 0 0 0 0 
+state.00000001 0 0 0 0 1 1 0 
+state.00000010 0 0 0 1 0 1 0 
+state.00000011 0 0 1 0 0 1 0 
+state.00000100 0 0 0 0 0 1 1 
+state.00001010 0 1 0 0 0 1 0 
+state.00001011 1 0 0 0 0 1 0 
 
-State Machine - |uart_string_loopback|uart_rx:uart_rx_inst|state
-Name state.STATE_STOP state.STATE_DATA state.STATE_START state.STATE_IDLE 
-state.STATE_IDLE 0 0 0 0 
-state.STATE_START 0 0 1 1 
-state.STATE_DATA 0 1 0 1 
-state.STATE_STOP 1 0 0 1 
+State Machine - |de1_soc_uart|soc_system:u0|soc_system_mm_interconnect_1:mm_interconnect_1|altera_merlin_burst_adapter:fifo_0_in_csr_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |de1_soc_uart|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:onchip_memory2_0_s2_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |de1_soc_uart|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:fifo_0_in_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 

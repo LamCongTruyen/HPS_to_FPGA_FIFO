@@ -1,14 +1,17 @@
-Analysis & Synthesis Status : Successful - Mon Sep 22 18:39:23 2025
+Analysis & Synthesis Status : Successful - Sun Oct 12 18:08:39 2025
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : UART_FPGA
-Top-level Entity Name : uart_string_loopback
-Family : Cyclone IV E
-Total logic elements : 202
-    Total combinational functions : 171
-    Dedicated logic registers : 124
-Total registers : 124
-Total pins : 4
+Top-level Entity Name : de1_soc_uart
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 1327
+Total pins : 368
 Total virtual pins : 0
-Total memory bits : 256
-Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total block memory bits : 16,384
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 1

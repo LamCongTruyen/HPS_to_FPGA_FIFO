@@ -1,0 +1,121 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\prj_FPGA\UART_core_update\soc_system.qsys --block-symbol-file --output-directory=C:\prj_FPGA\UART_core_update\soc_system --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading UART_core_update/soc_system.qsys
+Progress: Reading input file
+Progress: Adding clock_bridge_0 [altera_clock_bridge 24.1]
+Progress: Parameterizing module clock_bridge_0
+Progress: Adding fifo_0 [altera_avalon_fifo 24.1]
+Progress: Parameterizing module fifo_0
+Progress: Adding hps_0 [altera_hps 24.1]
+Progress: Parameterizing module hps_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 24.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding sys_sdram_pll_0 [altera_up_avalon_sys_sdram_pll 18.0]
+Progress: Parameterizing module sys_sdram_pll_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: soc_system.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: soc_system.hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: soc_system.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Warning: soc_system.hps_0: HPS model no longer supports simulation for HPS FPGA Bridges.
+Info: soc_system.sys_sdram_pll_0: Refclk Freq: 50.0
+Warning: soc_system.: You have exported the interface fifo_0.out but not its associated reset interface.  Export the driver(s) of fifo_0.reset_out
+Warning: soc_system.: You have exported the interface fifo_0.out_csr but not its associated reset interface.  Export the driver(s) of fifo_0.reset_out
+Warning: soc_system.: You have exported the interface onchip_memory2_0.s1 but not its associated reset interface.  Export the driver(s) of onchip_memory2_0.reset1
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\prj_FPGA\UART_core_update\soc_system.qsys --synthesis=VERILOG --output-directory=C:\prj_FPGA\UART_core_update\soc_system\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading UART_core_update/soc_system.qsys
+Progress: Reading input file
+Progress: Adding clock_bridge_0 [altera_clock_bridge 24.1]
+Progress: Parameterizing module clock_bridge_0
+Progress: Adding fifo_0 [altera_avalon_fifo 24.1]
+Progress: Parameterizing module fifo_0
+Progress: Adding hps_0 [altera_hps 24.1]
+Progress: Parameterizing module hps_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 24.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding sys_sdram_pll_0 [altera_up_avalon_sys_sdram_pll 18.0]
+Progress: Parameterizing module sys_sdram_pll_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: soc_system.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: soc_system.hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: soc_system.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Warning: soc_system.hps_0: HPS model no longer supports simulation for HPS FPGA Bridges.
+Info: soc_system.sys_sdram_pll_0: Refclk Freq: 50.0
+Warning: soc_system.: You have exported the interface fifo_0.out but not its associated reset interface.  Export the driver(s) of fifo_0.reset_out
+Warning: soc_system.: You have exported the interface fifo_0.out_csr but not its associated reset interface.  Export the driver(s) of fifo_0.reset_out
+Warning: soc_system.: You have exported the interface onchip_memory2_0.s1 but not its associated reset interface.  Export the driver(s) of onchip_memory2_0.reset1
+Info: soc_system: Generating "soc_system" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master hps_0.h2f_lw_axi_master and slave fifo_0.in_csr because the master is of type axi and the slave is of type avalon.
+Info: fifo_0: Starting RTL generation for module 'soc_system_fifo_0'
+Info: fifo_0:   Generation command is [exec cmd /c {set LC_ALL=C&& C:/intelfpga_lite/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/quartus/bin64/perl/lib -I C:/intelfpga_lite/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/quartus/sopc_builder/bin -I C:/intelfpga_lite/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo -- C:/intelfpga_lite/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo/generate_rtl.pl --name=soc_system_fifo_0 --dir=C:/Users/lamco/AppData/Local/Temp/alt0371_6349621254772431820.dir/0002_fifo_0_gen/ --quartus_dir=C:/intelfpga_lite/quartus --verilog --config=C:/Users/lamco/AppData/Local/Temp/alt0371_6349621254772431820.dir/0002_fifo_0_gen//soc_system_fifo_0_component_configuration.pl --do_build_sim=0}]
+Info: fifo_0: Done RTL generation for module 'soc_system_fifo_0'
+Info: fifo_0: "soc_system" instantiated altera_avalon_fifo "fifo_0"
+Info: hps_0: "Running  for module: hps_0"
+Info: hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Warning: hps_0: HPS model no longer supports simulation for HPS FPGA Bridges.
+Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'soc_system_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec cmd /c {set LC_ALL=C&& C:/intelfpga_lite/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/quartus/bin64/perl/lib -I C:/intelfpga_lite/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/quartus/sopc_builder/bin -I C:/intelfpga_lite/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_system_onchip_memory2_0 --dir=C:/Users/lamco/AppData/Local/Temp/alt0371_6349621254772431820.dir/0003_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/quartus --verilog --config=C:/Users/lamco/AppData/Local/Temp/alt0371_6349621254772431820.dir/0003_onchip_memory2_0_gen//soc_system_onchip_memory2_0_component_configuration.pl --do_build_sim=0}]
+Info: onchip_memory2_0: Done RTL generation for module 'soc_system_onchip_memory2_0'
+Info: onchip_memory2_0: "soc_system" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: sys_sdram_pll_0: "soc_system" instantiated altera_up_avalon_sys_sdram_pll "sys_sdram_pll_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_1: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: rst_controller: "soc_system" instantiated altera_reset_controller "rst_controller"
+Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
+Info: sys_pll: "sys_sdram_pll_0" instantiated altera_pll "sys_pll"
+Info: reset_from_locked: "sys_sdram_pll_0" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info: fifo_0_in_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "fifo_0_in_translator"
+Info: hps_0_h2f_axi_master_agent: "mm_interconnect_0" instantiated altera_merlin_axi_master_ni "hps_0_h2f_axi_master_agent"
+Info: fifo_0_in_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "fifo_0_in_agent"
+Info: fifo_0_in_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "fifo_0_in_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: hps_0_h2f_axi_master_wr_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "hps_0_h2f_axi_master_wr_limiter"
+Info: Reusing file C:/prj_FPGA/UART_core_update/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: fifo_0_in_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "fifo_0_in_burst_adapter"
+Info: Reusing file C:/prj_FPGA/UART_core_update/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/prj_FPGA/UART_core_update/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/prj_FPGA/UART_core_update/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: fifo_0_in_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "fifo_0_in_rsp_width_adapter"
+Info: Reusing file C:/prj_FPGA/UART_core_update/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/prj_FPGA/UART_core_update/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file C:/prj_FPGA/UART_core_update/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/prj_FPGA/UART_core_update/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: soc_system: Done "soc_system" with 34 modules, 93 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
