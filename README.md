@@ -3,6 +3,10 @@
 
 <img width="570" height="461" alt="image" src="https://github.com/user-attachments/assets/7599be84-4121-4fbb-a817-3a9fda7aadc3" />
 
+Cấu hình Platform Design (Qsys):
+
+<img width="595" height="1016" alt="image" src="https://github.com/user-attachments/assets/5eca7e82-d6d1-48a8-bfd5-5b38ce4cc80a" />
+
 Tôi tìm hiểu và xây dựng dự án đầu tiên trên dòng DE1-SoC, với ý tưởng làm quen trên dòng SoC FPGA này là boot Linux trên HPS và truyền nhận dữ liệu xuống FPGA qua các IP tỏng Qsys (Platform Design trong Quatus Prime).
 
 Dòng SoCFPGA này cũng cho phép chạy một webserver bằng ngôn ngữ HTML nhưng vì tôi không thành thạo ngôn ngữ này nên đã chạy một server hết sức đơn giản bằng Python trên laptop Window sau đó gửi hình ảnh từ server tới HPS qua cổng Ethernet được kết nối trong mạng cục bộ. HPS nhận hình ảnh và xử lý bằng chương trình C chuyển hình ảnh thành các byte sau đó ánh xạ bộ nhớ tới các địa chỉ được khai báo ở đầu chương trình. Các địa chỉ này sinh ra trong quá trình Generate HDL trong Qsys nằm trong vùng bộ nhớ mặc định của FPGA được nhắc tới trong mục 2:https://ftp.intel.com/Public/Pub/fpgaup/pub/Intel_Material/18.1/Computer_Systems/DE1-SoC/DE1-SoC_Computer_NiosII.pdf
