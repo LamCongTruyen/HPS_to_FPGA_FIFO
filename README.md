@@ -5,7 +5,8 @@
 
 Cấu hình Platform Design (Qsys):
 
-<img width="595" height="1016" alt="image" src="https://github.com/user-attachments/assets/5eca7e82-d6d1-48a8-bfd5-5b38ce4cc80a" />
+<img width="1916" height="1050" alt="image" src="https://github.com/user-attachments/assets/40997467-6cdd-478d-8a0d-df1efd86243d" />
+
 
 Tôi tìm hiểu và xây dựng dự án đầu tiên trên dòng DE1-SoC, với ý tưởng làm quen trên dòng SoC FPGA này là boot Linux trên HPS và truyền nhận dữ liệu xuống FPGA qua các IP tỏng Qsys (Platform Design trong Quatus Prime).
 
