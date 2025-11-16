@@ -38,13 +38,13 @@ Sau khi xác minh thiết kế các module nhỏ bằng Testbench trên Modelsim
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e36e9aad-f351-40e3-9c92-3d3d0cf435fa" />
 
-Thời gian hoàn thành mã hóa: ~1.8us
+Thời gian hoàn thành mã hóa 1block 128bit: ~1.2us
 
-<img width="1913" height="301" alt="image" src="https://github.com/user-attachments/assets/9d6f359a-3c39-4104-877e-d592db8fc958" />
+<img width="1922" height="259" alt="image" src="https://github.com/user-attachments/assets/2829e11f-8cde-479a-bd01-eb230b901905" />
 
-Thời gian hoàn thành giải mã : ~1.3us
+Thời gian hoàn thành giải mã 1block 128bit : ~1.2us
 
-<img width="1914" height="304" alt="image" src="https://github.com/user-attachments/assets/1ae2c824-bdbf-4f03-8efe-fa1f72bdf633" />
+<img width="1913" height="243" alt="image" src="https://github.com/user-attachments/assets/9d7e1cf3-1b9d-4dda-8d0c-9a64d08e6370" />
 
 Theo như dạng sóng mà các tín hiệu chạy thực tế theo thời gian thực trên kit được ghi lại thì tôi không phát hiện trường hợp nào bị lỗi vì tín hiệu đến trễ hay đến sớm hay là bị glitch. 
 
