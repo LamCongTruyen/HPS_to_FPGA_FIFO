@@ -762,7 +762,7 @@ on the Quartus Prime software download page.
 		(text "clk" (rect 229 1339 476 2688)(font "Arial" (color 0 0 0)))
 		(text "system_pll_ref_reset" (rect 99 1355 318 2723)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "reset" (rect 229 1379 488 2768)(font "Arial" (color 0 0 0)))
-		(text " Computer_System " (rect 572 1400 1246 2810)(font "Arial" ))
+		(text " system " (rect 621 1400 1290 2810)(font "Arial" ))
 		(line (pt 224 32)(pt 432 32)(line_width 1))
 		(line (pt 432 32)(pt 432 1400)(line_width 1))
 		(line (pt 224 1400)(pt 432 1400)(line_width 1))

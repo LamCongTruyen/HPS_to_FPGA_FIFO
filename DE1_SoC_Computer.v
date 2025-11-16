@@ -393,7 +393,7 @@ reg [7:0] sram_address;
 reg sram_write ;
 wire sram_clken = 1'b1;
 wire sram_chipselect = 1'b1;
-reg [7:0] state ;
+reg [3:0] state ;
 //biến test
 reg [127:0] input_buffer;
 //reg [31:0] input_buffer [15:0];
@@ -412,7 +412,7 @@ reg hps_to_fpga_read ; // read command
 //           bit0==1 if full
 //           bit1==1 if empty
 wire [31:0] hps_to_fpga_out_csr_address = 0 ; // fill_level
-reg[31:0] hps_to_fpga_out_csr_readdata ;
+reg	[31:0] hps_to_fpga_out_csr_readdata ;
 reg [7:0] fill_level ;
 reg hps_to_fpga_out_csr_read ; // status regs read cmd
 reg [9:0] ledr_reg = 10'b0000000000;    // New: Register cho LEDR
@@ -423,7 +423,7 @@ wire [127:0]  aes_data_out;
 //=======================================================
 always @(posedge CLOCK_50 or negedge KEY[0]) begin
     if (~KEY[0]) begin
-        state <= 8'd0;
+        state <= 4'd0;
         sram_write <= 1'b0;
         wrptr <= 4'd0;
         rdptr <= 4'd0;
@@ -443,31 +443,31 @@ always @(posedge CLOCK_50 or negedge KEY[0]) begin
 		  aes_start <= 1'b0;
 		  
         case (state)
-            8'd0: begin
+            4'd0: begin
                 hps_to_fpga_out_csr_read <= 1'b1;
-                state <= 8'd1;
+                state <= 4'd1;
             end
 
-            8'd1: begin
+            4'd1: begin
                 hps_to_fpga_out_csr_read <= 1'b0;
-                state <= 8'd2;
+                state <= 4'd2;
             end
 
-            8'd2: begin
+            4'd2: begin
 					 hps_to_fpga_out_csr_read <= 1'b0;
                 if (hps_to_fpga_out_csr_readdata > 0) begin
                     hps_to_fpga_read <= 1'b1;
-                    state <= 8'd3;
+                    state <= 4'd3;
                 end else begin
-                    state <= 8'd0;
+                    state <= 4'd0;
                 end
             end
 
-            8'd3: begin
-                state <= 8'd4;
+            4'd3: begin
+                state <= 4'd4;
             end
 
-            8'd4: begin
+            4'd4: begin
                 data_buffer <= hps_to_fpga_readdata;
                 input_buffer[127 - 32*wrptr -: 32] <= hps_to_fpga_readdata;
                 wrptr <= wrptr + 1;  
@@ -476,63 +476,63 @@ always @(posedge CLOCK_50 or negedge KEY[0]) begin
                 if (wrptr == 3) begin
                     wrptr <= 4'd0;
 						  
-                    state <= 8'd5;
+                    state <= 4'd5;
                 end else begin
-                    state <= 8'd0;  
+                    state <= 4'd0;  
                 end
             end
 
-            8'd5: begin
+            4'd5: begin
 					 aes_start <= 1'b1;
 					 aes_in <= input_buffer;
 //              data_buffer_out <= input_buffer[127 - 32*rdptr -: 32];
 
-                state <= 8'd6;
+                state <= 4'd6;
             end
 	
-				8'd6: begin
+				4'd6: begin
 					 aes_start <= 1'b0;
 					 if(aes_valid_out) begin
 						  aes_data_buffer <= aes_data_out;
-						  state <= 8'd7;
+						  state <= 4'd7;
 					 end
 					 rdptr <= 4'd0;
 				end
 				
-            8'd7: begin
+            4'd7: begin
 //					 data_buffer_out <= input_buffer[127 - 32*rdptr -: 32];
                 sram_address <= 8'd1 + rdptr;
                 sram_writedata <= aes_data_buffer[127 - 32*rdptr -: 32];
                 sram_write <= 1'b1;
-                state <= 8'd8;
+                state <= 4'd8;
             end
 
-				8'd8: begin
+				4'd8: begin
 					 if (rdptr < 3) begin
                     rdptr <= rdptr + 1'b1;
 //                  state <= 8'd6;
-						  state <= 8'd7;
+						  state <= 4'd7;
                 end else begin
 						  
-                    state <= 8'd9;  
+                    state <= 4'd9;  
                 end 
             end
 				
-            8'd9: begin
+            4'd9: begin
                 sram_address <= 8'd0;
                 sram_writedata <= 32'd1;
                 sram_write <= 1'b1;
-                state <= 8'd0;
+                state <= 4'd0;
             end
 
             default: begin
-                state <= 8'd0;
+                state <= 4'd0;
             end
         endcase
     end
 end
-
-assign LEDR[9:0] = ledr_reg[9:0];
+//
+//assign LEDR[9:0] = ledr_reg[9:0];
 
 AES_CTR_pipelined aes_instance (
     .clk(CLOCK_50),
