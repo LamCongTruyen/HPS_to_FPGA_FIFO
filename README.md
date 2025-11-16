@@ -38,6 +38,14 @@ Sau khi xác minh thiết kế các module nhỏ bằng Testbench trên Modelsim
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e36e9aad-f351-40e3-9c92-3d3d0cf435fa" />
 
+Thời gian hoàn thành mã hóa: ~1.8us
+
+<img width="1913" height="301" alt="image" src="https://github.com/user-attachments/assets/9d6f359a-3c39-4104-877e-d592db8fc958" />
+
+Thời gian hoàn thành giải mã : ~1.3us
+
+<img width="1914" height="304" alt="image" src="https://github.com/user-attachments/assets/1ae2c824-bdbf-4f03-8efe-fa1f72bdf633" />
+
 Theo như dạng sóng mà các tín hiệu chạy thực tế theo thời gian thực trên kit được ghi lại thì tôi không phát hiện trường hợp nào bị lỗi vì tín hiệu đến trễ hay đến sớm hay là bị glitch. 
 
 À, một số ràng buộc về timing của SocFPGA vì thiếu tài liệu chính xác phải nên cài đặt như thế nào nên tôi sử dụng mặc định theo cài đặt của dự án gốc trong tutorial của Terasic.
