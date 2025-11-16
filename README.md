@@ -32,7 +32,7 @@ Kết quả chạy trên phần cứng thực tế cho tốc độ mã hóa cũn
 
 Video chạy thực tế trên phần cứng mà tôi đã thực hiện :
 
-https://youtu.be/S9YSKvQt69U
+https://youtu.be/Q3kLE4kaFmQ
 
 À, một số ràng buộc về timing của SocFPGA vì thiếu tài liệu chính xác phải nên cài đặt như thế nào nên tôi sử dụng mặc định theo cài đặt của dự án gốc trong tutorial của Terasic.
 
