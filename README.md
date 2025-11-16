@@ -34,7 +34,7 @@ Video chạy thực tế trên phần cứng mà tôi đã thực hiện :
 
 https://youtu.be/Q3kLE4kaFmQ
 
-Sau khi xác minh thiết kế bằng Testbench trên Modelsim và triển khi trên phần cứng chạy cho kết quả chính xác (tổng quát) để soi ra được xem có lỗi nào tiềm ẩn trong quá trình chạy (tại vì nếu lỗi 1,2byte thì không thể nào mà mở file dữ liệu ra đối chiếu từng byte được), thì tôi cũng thực hiện thêm đó là giám sát tín hiệu dữ liệu realtime thực tế được ghi lại vào Ram trong quá trình chạy trên kit bằng công cụ Signal Tap Logic Analyzer có trong Quatus. Kết quả sơ bộ như hình dưới:
+Sau khi xác minh thiết kế các module nhỏ bằng Testbench trên Modelsim (tôi có để hình ảnh trong dự án AES_uart_interface) và triển khi trên phần cứng chạy cho kết quả chính xác (tổng quát) để soi ra được xem có lỗi nào tiềm ẩn trong quá trình chạy (tại vì nếu lỗi 1,2byte thì không thể nào mà mở file dữ liệu ra đối chiếu từng byte được), thì tôi cũng thực hiện thêm đó là giám sát tín hiệu dữ liệu realtime thực tế được ghi lại vào Ram trong quá trình chạy trên kit bằng công cụ Signal Tap Logic Analyzer có trong Quatus. Kết quả sơ bộ như hình dưới:
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e36e9aad-f351-40e3-9c92-3d3d0cf435fa" />
 
