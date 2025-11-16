@@ -1,4 +1,4 @@
-# First_prj_on_DE1-Soc
+# AES128_ctr_on_DE1-SoC
 <img width="428" height="647" alt="image" src="https://github.com/user-attachments/assets/27e5fe10-03a7-43ab-8488-2f09d7d235db" />
 
 <img width="570" height="461" alt="image" src="https://github.com/user-attachments/assets/7599be84-4121-4fbb-a817-3a9fda7aadc3" />
