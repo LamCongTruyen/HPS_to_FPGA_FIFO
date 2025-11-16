@@ -13,7 +13,7 @@ from PyQt5.QtCore import Qt, QTimer
 SERVER_IP = "192.168.100.2"
 PORT = 8080
 BUFFER_SIZE = 4096
-CAM_URL = "http://192.168.1.135:81/stream"
+CAM_URL = "http://xxx.xxx.x.xxx:xx/stream"
 
 
 class App(QWidget):
